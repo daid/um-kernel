@@ -27,6 +27,7 @@ setenv dtb_list ${article_number}-${article_rev}.dtb ${article_number}.dtb part2
 load mmc 0 ${kernel_addr_r} uImage-sun7i-a20-opinicus_v1
 for dtb in ${dtb_list}; do
     if load mmc 0 ${fdt_addr_r} ${dtb}; then
+        echo "Using ${dtb}"
         bootm ${kernel_addr_r} - ${fdt_addr_r}
     fi
 done
