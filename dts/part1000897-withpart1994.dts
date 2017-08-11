@@ -44,6 +44,11 @@
 #include "part1000897-ultimainboard3.1.dtsi"
 #include "part1994-ulticontroller.dtsi"
 
+/ {
+	model = "Ultimaker 3 family (9051)";
+	compatible = "ultimaker,jedi", "olimex,a20-olinuxino-lime2", "allwinner,sun7i-a20";
+};
+
 &pio {
     oled_pins_opinicus: oled_pins@0 {
         allwinner,pins = "PI4";
